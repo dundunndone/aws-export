@@ -10,12 +10,16 @@ response = requests.get(
     'https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actions-resources-contextkeys.html')
 soup = BeautifulSoup(response.text, 'html.parser')
 service = soup.find('div', class_='highlights')
-f = open("AWSActions.html","w")
+f = open("aws-actions.html","w")
 f.write('<html><head>')
-f.write('<style> table {border: 0px solid #999; padding: 0px; width:100%; table-layout:fixed; font-family: Arial;}td,th {border: 0px solid #999;font-size: 12px; column-width:18%; padding: 0.5rem; text-align:left;vertical-align: top;} .header{background-color:#C0C0C0; }</style>')
-f.write('<table class="header"><tr><th>Service</th><th>Actions</th><th>Description</th><th>Access Level</th><th>Resource Types (*required)</th><th>Condition Keys</th><th>Dependent Actions</th></tr></table>')
+f.write('<style> table {border: 0px solid #999; padding: 0px; width:100%; table-layout:fixed; font-family: Arial;} \
+        td,th {border: 0px solid #999;font-size: 12px; column-width:18%; \
+        padding: 0.5rem; text-align:left;vertical-align: top;} \
+        .header{background-color:#C0C0C0; }</style>')
+f.write('<table class="header"><tr><th>Service</th><th>Actions</th><th>Description</th><th>Access Type</th> \
+        <th>Resource Types (*required)</th><th>Condition Keys</th><th>Dependent Actions</th></tr></table>')
 for anchor in service.find_all('a'):
-    #time.sleep(1)
+    time.sleep(1)
     table = []
     link = anchor.get('href').replace('./', '')
     response = requests.get('https://docs.aws.amazon.com/IAM/latest/UserGuide/' + link)
