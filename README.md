@@ -24,4 +24,3 @@ Results are subject to updates made by AWS to the [Service Authorization Referen
 ## Pre-reqs
 
 - Run `pip3 install -r requirements.txt` to install `bs4` and `requests`
-Test
