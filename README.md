@@ -1,5 +1,7 @@
 # AWS Exports
 
- - Exports list of all AWS CLI vervion 2 actions per service
- - Exports list of AWS actions & keys per service
+ - `cli-export.py` - Exports list of all AWS CLI vervion 2 actions per service.
+ - `aws-actions-export.py` - Exports list of AWS actions, resources, and condition keys per service. 
+ 
+ 
 
