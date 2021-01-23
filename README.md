@@ -8,9 +8,10 @@
 These scripts provide a number of benefits to help reduce security risks within IAM policies.
 
  - Find supported **Resources** per Action.
+ - Find **Dependent Actions** where privilege escalation could occur.
  - List documented Actions dependent on `iam:PassRole`. (76 so far)
 
-Not all actions will be listed. Results are subject to updates made by AWS to the [Service Authorization Reference](https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html) docs.
+Results are subject to updates made by AWS to the [Service Authorization Reference](https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html) docs. Not all services, actions, and supporting information will be listed. 
 
 
 # AWS CLI Export
