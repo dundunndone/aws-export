@@ -4,4 +4,6 @@
  - `aws-actions-export.py` - Exports list of AWS actions, resources, and condition keys per service. 
  
  
+## Pre-reqs
 
+- Run `pip3 install -r requirements.txt` to install `bs4` and `requests`
